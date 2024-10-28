@@ -1,0 +1,30 @@
+import Image from "next/image"
+import Link from "next/link"
+import { myLogo } from "@/assets/page"
+
+const Navbar = () => {
+    return (
+    <nav className="w-full fixed flex justify-center opacity-1000 bg-slate-50">
+        <div className="w-full max-w-[80%] grid grid-cols-3 gap-6 items-center justify-items-center">
+            <div className="flex items-center p-4">
+                <Image src={myLogo} alt="logo" className="h-20 w-20"/>
+                <h3 className="text-2xl">Paper Clip</h3>
+            </div>
+            <div className="flex items-center p-4">
+                <ul className="flex items-center justify-center gap-10">
+                    <li className="list-none hover:text-gray-400"><Link href={"/"}>Home</Link></li>
+                    <li className="list-none hover:text-gray-400"><Link href={"/"}>About</Link></li>
+                    <li className="list-none hover:text-gray-400"><Link href={"/"}>Testimonials</Link></li>
+                    <li className="list-none hover:text-gray-400"><Link href={"/"}>Contact us</Link></li>
+                </ul>
+            </div>
+            <div className="flex items-center gap-4">
+                <Link className="px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80" href={"/"}>Get started</Link>
+                <Link className="px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform bg-green-600 rounded-lg hover:bg-green-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80" href={"/"}>Sign in</Link>
+            </div>
+        </div>
+    </nav>
+    )
+}
+
+export default Navbar
