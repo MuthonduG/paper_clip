@@ -1,5 +1,5 @@
 "use client";
-import { useState, MouseEvent } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 
@@ -9,16 +9,16 @@ import sideImage from "@/assets/side_img.webp";
 
 
 // interface for login data
-interface UserData {
-    username: string;
-    email: string;
-    password: number;
-}
+// interface UserData {
+//     username: string;
+//     email: string;
+//     password: number;
+// }
 
 // create checkouthtmlForm
 export function LoginRegisterForm () {
     const [register, isRegister] = useState<boolean>(true);
-    const [error, isError] = useState<boolean>(false);
+    // const [error, isError] = useState<boolean>(false);
 
     return (
         <div className="flex items-center justify-center min-h-screen p-4 md:p-8 bg-gray-50 dark:bg-gray-900">
