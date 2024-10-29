@@ -6,7 +6,7 @@ import menuIcon from "@/assets/hamburger.png"
 const Navbar = () => {
     return (
     <nav className="w-full fixed flex justify-center opacity-1000 bg-slate-50">
-        <div className="w-full max-w-[80%] grid grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-4 items-center justify-items-center">
+        <div className="w-full max-w-[80%] grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-4 items-center justify-items-center">
             <div className="flex items-center p-4">
                 <Image src={myLogo} alt="logo" className="h-20 w-20"/>
                 <h3 className="text-2xl">Paper Clip</h3>
