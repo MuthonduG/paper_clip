@@ -1,5 +1,5 @@
 import Footer from "@/app/components/Footer/Footer";
-import {LoginRegisterForm} from "@/app/components/Forms/Form";
+// import {LoginRegisterForm} from "@/app/components/Forms/Form";
 import Navbar from "@/app/components/Navbar/Navbar";
 import HomeComponent from "./pages/Home/page";
 
