@@ -5,7 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 
 // local directory imports
 import Image from "next/image";
-import sideImage from "@/assets/side_img.webp";
+import sideImage from "../../assets/side_img.webp";
 
 
 // interface for login data
