@@ -1,12 +1,20 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import myLogo from "@/app/assets/bug-logo.png"
+import myLogo from "@/app/assets/bug-logo.png";
 import menuIcon from "../../assets/hamburger.png";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
     const [isPopupVisible, setIsPopupVisible] = useState<boolean>(false);
+    const router = useRouter();
+
+    const routeToPage = (route: string) => {
+        if (route === "get-started") {
+            router.push("./pages/get-started");
+        }
+    };
 
     const displayPopup = () => {
         setIsPopupVisible(!isPopupVisible);
@@ -16,7 +24,7 @@ const Navbar = () => {
         <nav className="w-full fixed flex justify-center opacity-100 bg-slate-50">
             <div className="w-full max-w-[80%] grid grid-cols-3 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-4 items-center justify-items-center cursor-pointer">
                 <div className="flex items-center p-4">
-                    <Image src={myLogo} alt="logo" className="h-20 w-20"/>
+                    <Image src={myLogo} alt="logo" className="h-20 w-20" />
                     <h3 className="text-2xl">Paper Clip</h3>
                 </div>
                 <div className="flex items-center p-4 xl:flex md:hidden sm:hidden">
@@ -28,11 +36,16 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex items-center xl:flex gap-4 sm:hidden">
-                    <Link className="px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80" href="/get-started">Get started</Link>
+                    <button
+                        className="px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80"
+                        onClick={() => routeToPage("get-started")}
+                    >
+                        Get started
+                    </button>
                     <Link className="px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform bg-green-600 rounded-lg hover:bg-green-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80" href="/sign-in">Sign in</Link>
                 </div>
                 <div className="flex items-center xl:hidden md:flex h-6 w-6 overflow-hidden rounded-sm cursor-pointer" onClick={displayPopup}>
-                    <Image src={menuIcon} alt="menu" className="w-full"/>
+                    <Image src={menuIcon} alt="menu" className="w-full" />
                 </div>
             </div>
             
