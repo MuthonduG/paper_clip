@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { myLogo } from "@/app/assets/page";
+import myLogo from "@/app/assets/bug-logo.png"
 import menuIcon from "../../assets/hamburger.png";
 
 const Navbar = () => {
