@@ -1,0 +1,10 @@
+django 
+django_restframework 
+djangorestframework 
+markdown 
+django-filter 
+mysqlclient 
+django-dotenv 
+python-decouple
+django-oauth-toolkit
+django-cors-headers
